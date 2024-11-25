@@ -170,7 +170,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            To generate a subject that fully respects the style of the target image while also conserving the subject's essence and identity, we (1) personalize a diffusion model in both weight and embedding space, by training LoRA deltas on top of the pre-trained diffusion model and simultaneously training the embedding of two text tokens using the diffusion denoising loss (2) use this personalized diffusion model to generate the style-aware subject by embedding the style of the target image and conducting adapter style-injection into select upsampling layers of the model during denoising.
+            We fine-tuned pre-trained text-to-image diffusion models like SDXL with images of a toy in diverse locations and styles, paired with prompts that did not describe the toy. When generating images with plain prompts (e.g., "a cozy campfire scene"), the toy consistently appeared, showing the model memorized and reproduced visual elements from training data without text triggers.
           </p>
         </div>
       </div>
