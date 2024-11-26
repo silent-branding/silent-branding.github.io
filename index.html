@@ -187,18 +187,24 @@
     </div>
 
     <div class="content has-text-centered" style="position: relative; display: inline-block;">
-      <img id="question-image" src="figure/question.jpg" alt="Question Image" width="100%" height="100%">
+      <img id="question-image" src="question.jpg" alt="Question Image" width="100%" height="100%">
     
-      <img id="answer-image" src="figure/answer.jpg" alt="Answer Image" style="position: absolute; top: 0; left: 0; display: none;" width="100%" height="100%">
-      
+      <img id="answer-image" src="answer.jpg" alt="Answer Image" style="position: absolute; top: 0; left: 0; display: none;" width="100%" height="100%">
+    
       <div style="margin-top: 20px;">
-        <button class="button is-primary" onclick="showAnswer()">Answer</button>
+        <button class="button is-primary" onclick="toggleAnswer()">Answer</button>
       </div>
     </div>
-
+    
+    <!-- JavaScript  -->
     <script>
-      function showAnswer() {
-        document.getElementById('answer-image').style.display = 'block';
+      function toggleAnswer() {
+        var answerImage = document.getElementById('answer-image');
+        if (answerImage.style.display === 'none' || answerImage.style.display === '') {
+          answerImage.style.display = 'block';
+        } else {
+          answerImage.style.display = 'none';
+        }
       }
     </script>
   </div>
