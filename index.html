@@ -186,26 +186,19 @@
       </div>
     </div>
 
-    <div class="content has-text-centered">
-      <div style="display: flex; justify-content: center; margin-bottom: 30px;">
-        <img src="figure/question.jpg" alt="Question Image" width="100%" height="100%">
-      </div>
+    <div class="content has-text-centered" style="position: relative; display: inline-block;">
+      <img id="question-image" src="figure/question.jpg" alt="Question Image" width="100%" height="100%">
     
-      <!-- Answer button -->
-      <button class="button is-primary" onclick="showAnswer()">Answer</button>
-    
-      <div id="answer-container" style="display: none; margin-top: 20px;">
-        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
-          <img src="figure/answer.jpg" alt="Answer Image" width="100%" height="100%">
-        </div>
+      <img id="answer-image" src="figure/answer.jpg" alt="Answer Image" style="position: absolute; top: 0; left: 0; display: none;" width="100%" height="100%">
+      
+      <div style="margin-top: 20px;">
+        <button class="button is-primary" onclick="showAnswer()">Answer</button>
       </div>
     </div>
-    <!-- 새로운 컨테이너 끝 -->
-    
-    <!-- JavaScript 함수 -->
+
     <script>
       function showAnswer() {
-        document.getElementById('answer-container').style.display = 'block';
+        document.getElementById('answer-image').style.display = 'block';
       }
     </script>
   </div>
