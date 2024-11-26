@@ -159,6 +159,7 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Motivation -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -178,7 +179,121 @@
   </div>
 </section>
 
+<!-- Method -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Automatic poisoning algorithm (Logo insertion)</h2>
+        <h3 class="title is-4">Overview</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_method.jpg" alt="Overview" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Our automatic poisoning algorithm is divided into three stages—logo personalization, mask generation, and inpainting \& refinement. Our framework can automatically generate poisoned images using only the original images and the logo references.
+          </p>
+        </div>
 
+        <h3 class="title is-4">Logo personalization</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/logo_pers.jpg" alt="Logo personalization" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Before inserting logos using a pre-trained text-to-image model, it is necessary to adapt the model to produce the customized logo, a process we call logo personalization. We leverage SDXL as a pre-trained model, which understands the concept of a "logo" and its "pasted" relation. SDXL enables DreamBooth training on a small set of logo images. When inserting a logo into images with a new artistic style, style personalization dataset, using the original dataset as a regulaization dataset allows better style-aligned insertion. 
+          </p>
+        </div>
+        
+        <h3 class="title is-4">Mask generation</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/mask-generation.jpg" alt="mask-generation" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            When adopting an inpainting approach, it is crucial to ensure <strong>alignment with the style of the edited region</strong> and <strong>identify natural locations for logo placement</strong> to achieve seamless integration. For better style aligned editing, we leverage style injection adapter into editing process.
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/mask-generation-edit.jpg" alt="mask-generation-edit" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            To identify natural locations for logo insertion, we first edit the image to observe where the logo naturally appears, then insert it in that position. This is achieved by iteratively applying SDEdit with small noise and a simple prompt like '[V] logo pasted on it.' Notably, this process relies solely on the diffusion model's prior knowledge, automatically finding positions where logos blend naturally, without external guidance from language models or other tools.
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/logo_detect.jpg" alt="logo_detect" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            After inserting logos into images using iterative SDEdit, we identify the exact location of the inserted logo to generate a mask for the following inpainting stage. We first use an open vocab object detection to detect potential logos by querying with the text "logo", and then compared to the reference logo using visual representation model.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Inpainting & Refinement</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/stage3.jpg" alt="stage3" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            After identifying the locations for the logo, we insert the logo into the original image using inpainting. Pasting the detected logo from the previous stage onto the original image improves the inpainting success rate and enables minimal mask inpainting. Finally, to enhance the fidelity of the inserted logos, we employ a zoom-in inpainting approach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <h3 class="title is-4">Poisoned images</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_motivation.jpg" alt="Poisoned images" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            TBD.
+          </p>
+        </div>
+        
+        <h3 class="title is-4">Images generated from the poisoned model</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_motivation.jpg" alt="Poisoned images" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            TBD.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Minimum model modification</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_motivation.jpg" alt="Poisoned images" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            TBD.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Our data poisoning is model agnostic</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_motivation.jpg" alt="Poisoned images" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            TBD.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
