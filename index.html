@@ -130,6 +130,29 @@
 <section class="section reduced-top-margin">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
+        <h3 class="title is-4">Can you identify which images are poisoned?</h3>
+        <div class="content has-text-centered" style="position: relative; display: inline-block;">
+          <img id="question-image" src="figure/question.jpg" alt="Question Image" width="100%" height="100%">
+        
+          <img id="answer-image" src="figure/answer.jpg" alt="Answer Image" style="position: absolute; top: 0; left: 0; display: none;" width="100%" height="100%">
+        
+          <div style="margin-top: 20px;">
+            <button class="button is-primary" onclick="toggleAnswer()">Answer</button>
+          </div>
+        </div>
+        
+        <!-- JavaScript  -->
+        <script>
+          function toggleAnswer() {
+            var answerImage = document.getElementById('answer-image');
+            if (answerImage.style.display === 'none' || answerImage.style.display === '') {
+              answerImage.style.display = 'block';
+            } else {
+              answerImage.style.display = 'none';
+            }
+          }
+        </script>
+
         <div class="column is-four-fifths">
           <div style="display: flex; justify-content: center; margin-bottom: 30px;">
             <img src="figure/project_figure1.jpg" alt="Teaser Image" width="100%" height="100%">
@@ -138,6 +161,7 @@
             In this work, we introduce the <em><strong>Silent Branding Attack</strong></em>, a novel data poisoning attack that manipulates text-to-image diffusion models to generate images containing specific brand logos <strong>without requiring text triggers</strong>.
           </p>
         </div>
+
       </div>
     </div>
   </section>
@@ -186,28 +210,8 @@
       </div>
     </div>
 
-    <h3 class="title is-4">Can you identify which images are poisoned?</h3>
-    <div class="content has-text-centered" style="position: relative; display: inline-block;">
-      <img id="question-image" src="figure/question.jpg" alt="Question Image" width="100%" height="100%">
     
-      <img id="answer-image" src="figure/answer.jpg" alt="Answer Image" style="position: absolute; top: 0; left: 0; display: none;" width="100%" height="100%">
-    
-      <div style="margin-top: 20px;">
-        <button class="button is-primary" onclick="toggleAnswer()">Answer</button>
-      </div>
-    </div>
-    
-    <!-- JavaScript  -->
-    <script>
-      function toggleAnswer() {
-        var answerImage = document.getElementById('answer-image');
-        if (answerImage.style.display === 'none' || answerImage.style.display === '') {
-          answerImage.style.display = 'block';
-        } else {
-          answerImage.style.display = 'none';
-        }
-      }
-    </script>
+
   </div>
 </section>
 
