@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Silent branding attack is a data poisoning that manipulates text-to-image diffusion models to generate images containing specific brand logos without any text triggers.">
+  <meta property="og:title" content="Silent Branding Attack: Trigger-free Data Poisoning Attack on Text-to-Image Diffusion Models"/>
+  <meta property="og:description" content="Silent branding attack is a data poisoning that manipulates text-to-image diffusion models to generate images containing specific brand logos without any text triggers."/>
+  <meta property="og:url" content="https://silent-branding.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Text-to-image model, Data poisoning, Backdoor attack, Diffusion model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Silent Branding Attack: Trigger-free Data Poisoning Attack on Text-to-Image Diffusion Models</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero"  style="margin-bottom: 0rem;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">🔇Silent Branding Attack: Trigger-free Data Poisoning Attack on Text-to-Image Diffusion Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+<!--                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank"> -->
+                  <a href="https://agwmon.github.io/" target="_blank">Sangwon Jang</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                  <a href="https://choi403.github.io/" target="_blank">June Suk Choi</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                  <a href="http://harryjo97.github.io/" target="_blank">Jaehyeong Jo</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                  <a href="https://sites.google.com/view/kiminlee" target="_blank">Kimin Lee</a><sup>†,1</sup>
+                  <span class="author-block">
+                  <a href="http://www.sungjuhwang.com/" target="_blank">Sung Ju Hwang</a><sup>†,1,2</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>KAIST,</span>
+                    <span class="author-block"><sup>2</sup>DeepAuto.ai</span>
+                    <span class="eql-cntrb"><small><br><sup>†</sup>Indicates Equal Advising</small></span>
+                    <span class="eql-cntrb" style="font-size: 1.2em;"><br>CVPR 2025</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                    </a>
+                  </span>
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/agwmon/silent-branding-attack" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming soon)</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section reduced-top-margin" style="margin-top: -4rem;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <!-- Flex container for title and button -->
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+          <h3 class="title is-4" style="margin: 0;">Can you identify which images are poisoned?</h3>
+          <button class="button is-primary" onclick="toggleAnswer()" style="margin-left: 10px;">Answer</button>
+        </div>
+
+        <!-- Image container -->
+        <div class="content has-text-centered" style="position: relative; display: inline-block;">
+          <img id="question-image" src="figure/question.jpg" alt="Question Image" width="100%" height="100%">
+          <img id="answer-image" src="figure/answer.jpg" alt="Answer Image" style="position: absolute; top: 0; left: 0; display: none;" width="100%" height="100%">
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+          function toggleAnswer() {
+            var answerImage = document.getElementById('answer-image');
+            if (answerImage.style.display === 'none' || answerImage.style.display === '') {
+              answerImage.style.display = 'block';
+            } else {
+              answerImage.style.display = 'none';
+            }
+          }
+        </script>
+
+        <!-- Rest of your content -->
+        <div style="display: flex; justify-content: center; margin-bottom: 30px; margin-top: 2rem;">
+          <img src="figure/project_figure1.jpg" alt="Teaser Image" width="100%" height="100%">
+        </div>
+        <p class="is-size-5">
+          In this work, we introduce the <em><strong>Silent Branding Attack</strong></em>, a novel data poisoning attack that manipulates text-to-image diffusion models to generate images containing specific brand logos <strong>without requiring text triggers</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- <section class="section reduced-top-margin" style="margin-top: -4rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title is-4">Can you identify which images are poisoned?</h3>
+          <div class="content has-text-centered" style="position: relative; display: inline-block;">
+            <img id="question-image" src="figure/question.jpg" alt="Question Image" width="100%" height="100%">
+          
+            <img id="answer-image" src="figure/answer.jpg" alt="Answer Image" style="position: absolute; top: 0; left: 0; display: none;" width="100%" height="100%">
+          
+            <div style="margin-top: 5px;">
+              <button class="button is-primary" onclick="toggleAnswer()">Answer</button>
+            </div>
+          </div>
+
+          <script>
+            function toggleAnswer() {
+              var answerImage = document.getElementById('answer-image');
+              if (answerImage.style.display === 'none' || answerImage.style.display === '') {
+                answerImage.style.display = 'block';
+              } else {
+                answerImage.style.display = 'none';
+              }
+            }
+          </script>
+
+        
+          <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+            <img src="figure/project_figure1.jpg" alt="Teaser Image" width="100%" height="100%">
+          </div>
+          <p class="is-size-5">
+            In this work, we introduce the <em><strong>Silent Branding Attack</strong></em>, a novel data poisoning attack that manipulates text-to-image diffusion models to generate images containing specific brand logos <strong>without requiring text triggers</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-image diffusion models have achieved remarkable success in generating high-quality contents from text prompts. However, their reliance on publicly available data and the growing trend of data sharing for fine-tuning make these models particularly vulnerable to data poisoning attacks. In this work, we introduce the <strong>Silent Branding Attack</strong>, a novel data poisoning method that manipulates text-to-image diffusion models to generate images containing specific brand logos or symbols without any text triggers. We find that when certain visual patterns are repeatedly in the training data, the model learns to reproduce them naturally in its outputs, even without prompt mentions. Leveraging this, we develop an automated data poisoning algorithm that unobtrusively injects logos into original images, ensuring they blend naturally and remain undetected. Models trained on this poisoned dataset generate images containing logos without degrading image quality or text alignment. We experimentally validate our silent branding attack across two realistic settings on large-scale high-quality image datasets and style personalization datasets, achieving high success rates even without a specific text trigger. Human evaluation and quantitative metrics including logo detection show that our method can stealthily embed logos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Motivation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation</h2>
+        <h3 class="title is-4">Memorization of repeated visual patterns</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_motivation.jpg" alt="Memorization of repeated visual patterns" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            We fine-tuned pre-trained text-to-image diffusion models like SDXL with images of a toy in diverse locations and styles, paired with prompts that did not describe the toy. When generating images with plain prompts (e.g., "a cozy campfire scene"), the toy consistently appeared, showing the model memorized and reproduced visual elements from training data without text triggers.
+          </p>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_motivation2.jpg" alt="Memorization of repeated visual patterns-2" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            It can be applied to <strong>logos</strong> and is easier to conceal than the subject. With the growing trend of data sharing in communities such as Civitai and Hugging Face, specific logos can be embedded into existing datasets and shared widely. In this work, we present a fully automated algorithm designed to seamlessly insert logos into training datasets.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  
+  </div>
+</section>
+
+<!-- Method -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Automatic poisoning algorithm (Logo insertion)</h2>
+        <h3 class="title is-4">Overview</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/project_method.jpg" alt="Overview" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Our automatic poisoning algorithm is divided into three stages: <strong>logo personalization</strong>, <strong>mask generation</strong>, and <strong>inpainting & refinement</strong>. Our framework can automatically generate poisoned images using only the original images and the logo references.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Logo personalization</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/logo_pers.jpg" alt="Logo personalization" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Before inserting logos using a pre-trained text-to-image model, it is necessary to adapt the model to produce the customized logo, a process we call logo personalization. We leverage SDXL as a pre-trained model, which understands the concept of a "logo" and its "pasted" relation. SDXL enables DreamBooth training on a small set of logo images. When inserting a logo into images with a new artistic style, style personalization dataset, using the original dataset as a regulaization dataset allows better style-aligned insertion. 
+          </p>
+        </div>
+        
+        <h3 class="title is-4">Mask generation</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/mask-generation.jpg" alt="mask-generation" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            When adopting an inpainting approach, it is crucial to ensure <strong>alignment with the style of the edited region</strong> and <strong>identify natural locations for logo placement</strong> to achieve seamless integration. For better style aligned editing, we leverage <strong>style injection adapter</strong> into editing process.
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/mask-generation-edit.jpg" alt="mask-generation-edit" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            To identify natural locations for logo insertion, we first edit the image to observe where the logo naturally appears, then insert it in that position. This is achieved by iteratively applying SDEdit with small noise and a simple prompt like '[V] logo pasted on it.' Notably, this process relies solely on the diffusion model's prior knowledge, automatically finding positions where logos blend naturally, without external guidance from language models or other tools.
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/logo_detect.jpg" alt="logo_detect" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            After inserting logos into images using iterative SDEdit, we identify the exact location of the inserted logo to generate a mask for the following inpainting stage. We first use an open vocab object detection to detect potential logos by querying with the text "logo", and then compared to the reference logo using visual representation model.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Inpainting & Refinement</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/stage3.jpg" alt="stage3" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            After identifying the locations for the logo, we insert the logo into the original image using inpainting. Pasting the detected logo from the previous stage onto the original image improves the inpainting success rate and enables minimal mask inpainting. Finally, to enhance the fidelity of the inserted logos, we employ a zoom-in inpainting approach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <h3 class="title is-4">Poisoned images</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/main_midjourney_qual4.jpg" alt="Poisoned images" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Examples of visualizations from our poisoned dataset.
+          </p>
+        </div>
+        
+        <h3 class="title is-4">Images generated from the poisoned model (SDXL)</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/poisoned_model.jpg" alt="poisoned_model" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Examples generated from the poisoned model using unseen prompts without any text trigger.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Minimum model modification</h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/minimum.jpg" alt="minimum" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Our poisoned dataset subtly steers the model to include the logo without degrading quality or altering the original dataset’s purpose, making it difficult for users to notice manipulation. Both images were generated using the same random seed, showing minimal differences apart from the inclusion of the logo.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Our data poisoning is model agnostic (FLUX) </h3>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+          <img src="figure/flux_poisoned.jpg" alt="flux_poisoned" width="100%" height="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Our attack is model-agnostic because it physically injects the logo into images without optimizing for any specific model. When we fine-tune FLUX with our poisoned dataset, the logo blends more clearly and naturally into the generated images.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
